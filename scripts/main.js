@@ -106,7 +106,7 @@ document.querySelector("table").addEventListener("click", function (e) {
 function validateData(ele) {
     regex = {
         "site-name": /^[a-z1-9]+/i,
-        "site-url": /(http:\/\/|https:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/gm,
+        "site-url": /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/gm,
     }
     if (regex[ele.id].test(ele.value)) {
         document.getElementById("add").style.cssText = "cursor: pointer;";
