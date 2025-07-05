@@ -4,7 +4,7 @@ let sites = [];
 
 let index = 0;
 
-if (localStorage.sites !== 'undefined') {
+if (localStorage.sites) {
     sites = JSON.parse(localStorage.sites);
     index = sites.length;
     displaySites();
